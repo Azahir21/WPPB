@@ -1,23 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/praktikum2/main2.dart';
-import 'package:hello_world/praktikum3/main3.dart';
+import 'package:hello_world/praktikum3/part1/main3part1.dart';
+import 'package:hello_world/praktikum3/part2/main3part2.dart';
 
-void main() {
-  runApp(
-      MaterialApp(
-          title: "App",
-          home: MyApp()
-      )
-  );
+class Main3 extends StatefulWidget{
+  const Main3({Key? key}) : super(key: key);
+
+  @override
+  State<Main3> createState() => _Main3();
 }
 
-class MyApp extends StatelessWidget {
+class _Main3 extends State<Main3> {
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("WPPB"),
+        title: Text("Praktikum 3"),
       ),
       body: Center(
           child: Column(
@@ -25,16 +23,16 @@ class MyApp extends StatelessWidget {
             children: [
               ElevatedButton(onPressed: (){
                 Navigator.push(context, MaterialPageRoute(
-                    builder: (context) => Main2()
+                    builder: (context) => Main3part1()
                 )
                 );
-              }, child: Text("Praktikum 2")),
+              }, child: Text("Part 1")),
               ElevatedButton(onPressed: (){
                 Navigator.push(context, MaterialPageRoute(
-                    builder: (context) => Main3()
+                    builder: (context) => Main3part2()
                 )
                 );
-              }, child: Text("Praktikum 3")),
+              }, child: Text("Part 2")),
             ],
           )
       ),
